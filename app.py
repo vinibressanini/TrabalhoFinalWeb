@@ -28,7 +28,7 @@ api.add_resource(Movies, '/movies')
 api.add_resource(Movie, '/movies/<int:id>')
 api.add_resource(User, '/users/<int:user_id>')
 api.add_resource(UserLogin, '/login')
-api.add_resource(Rating, '/ratings')
+api.add_resource(Rating, '/ratings/<int:movie_id>')
 
 if __name__ == '__main__':
     from sql_alchemy import database
