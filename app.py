@@ -2,6 +2,7 @@ from flask import Flask
 from flask_restful import Api
 from resources.movies import Movies, Movie
 from resources.users import User, UserLogin
+from resources.ratings import Rating, RatingModel
 from flask_jwt_extended import JWTManager
 
 app = Flask(__name__)
@@ -27,6 +28,7 @@ api.add_resource(Movies, '/movies')
 api.add_resource(Movie, '/movies/<int:id>')
 api.add_resource(User, '/users/<int:user_id>')
 api.add_resource(UserLogin, '/login')
+api.add_resource(Rating, '/ratings')
 
 if __name__ == '__main__':
     from sql_alchemy import database
