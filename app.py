@@ -1,4 +1,4 @@
-from flask import Flask
+from flask import Flask, render_template, request
 from flask_restful import Api
 from resources.movies import Movies, Movie
 from resources.users import User, UserLogin
@@ -26,11 +26,22 @@ def create_database():
 
 api.add_resource(Movies, '/movies')
 api.add_resource(Movie, '/movies/<int:id>')
-api.add_resource(User, '/users/<int:user_id>')
+api.add_resource(User, '/users')
 api.add_resource(UserLogin, '/login')
 api.add_resource(Rating, '/ratings/<int:movie_id>')
+
+@app.route('/', methods=['GET'])
+def index():
+    return render_template('index.html')
+
+@app.route('/itens')
+def home():
+    print('entrou porra')
+    return render_template('home.html')
 
 if __name__ == '__main__':
     from sql_alchemy import database
     database.init_app(app)
     app.run(debug=True)
+
+#https://pythonbasics.org/flask-http-methods/

@@ -61,7 +61,7 @@ footer {
 }
 
 body {
-    background-image: url(../resources/background.jpg);
+    background-image: url(../bootstrap/resources/background.jpg);
     background-repeat: no-repeat;
     background-size: cover;
 }

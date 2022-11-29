@@ -1,6 +1,7 @@
 from flask_restful import Resource, reqparse
 from models.user import UserModel
 from flask_jwt_extended import create_access_token
+from flask import Flask, redirect, url_for, request
 
 minha_requisicao = reqparse.RequestParser()
 minha_requisicao.add_argument('login', type=str, required=True, help="login is required")
@@ -21,7 +22,10 @@ class User(Resource):
             return {'message' : 'user deleted.'}
         return {'message' : 'user not founded'}, 204
 
-    def post(self, user_id):
+    def post(self):
+        print ('chamou o método')
+        print(self)
+        
         if UserModel.find_user_by_login(dados['login']):
             return {'message':'Login {} already exists'.format(dados['login'])}, 200
 
@@ -32,10 +36,11 @@ class User(Resource):
         try:
             print(new_user.json())
             new_user.save_user()
+            return redirect(url_for('/itens'))
         except:
             return {'message':'An internal error ocurred.'}, 500
 
-        return new_user.json(), 201
+        # return new_user.json(), 201
 
 class UserLogin(Resource):
 
