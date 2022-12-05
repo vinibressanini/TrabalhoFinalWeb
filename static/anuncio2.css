@@ -1,0 +1,30 @@
+#navbar,footer {
+    background-color: #BAEDF2;
+}
+
+.container {
+    padding: 2em;
+    margin-top: 3em;
+    margin-bottom: 3em;
+    border: 2px black solid;
+    border-radius: 15px;
+    background-color: #BAEDF2;
+}
+
+#fogs {
+    border: 1px black solid;
+    border-radius: 13px;
+    width: 250px;
+    height: 240px;
+    background-color: white;
+}
+
+.itens {
+    padding-top: 2em;
+    padding-bottom: 2em;
+}
+
+.btnNegociar {
+    margin-top: 3em;
+    width:auto;
+}

@@ -1,0 +1,37 @@
+.container {
+    padding: 2em;
+    margin-top: 3em;
+    margin-bottom: 3em;
+    border: 2px black solid;
+    border-radius: 15px;
+    background-color: #BAEDF2;
+}
+
+#fogs {
+    border: 1px black solid;
+    border-radius: 13px;
+    width: 350px;
+    height: 340px;
+    background-color: whitesmoke;
+}
+
+#maps {
+    border: 1px black solid;
+    margin-top: 1em;
+    border-radius: 13px;
+    height: 15em;
+    width: 20em;
+}
+
+#navbar,footer {
+    background-color: #BAEDF2;
+}
+
+textarea {
+    resize: none;
+}
+
+button {
+    width: 150px;
+}
+

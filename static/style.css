@@ -1,0 +1,67 @@
+.container {
+    padding: 2em;
+    margin-top: 5em;
+    margin-bottom: 5em;
+    border: 2px black solid;
+    border-radius: 15px;
+    width: 500px;
+    background-color: #BAEDF2;
+    opacity: 0.9;
+}
+
+input {
+    margin-top: 1em;
+}
+
+h3 {
+    display: flex;
+    font-style:italic ;
+    margin-bottom: 10em;
+    padding: 1em;
+    justify-content: center;
+}
+
+.btnEntrar {
+    margin-top: 2em;
+    margin-bottom: 2em;
+}
+
+.link {
+    display: flex;
+    justify-content: end;
+} 
+
+.floatingLbl {
+    display: flex;
+    align-items: flex-end;
+}
+
+.images {
+    width: 65px;
+    height: 50px;
+    display: flex;
+    padding-left: 1em;
+    justify-content: flex-start;
+}
+
+.btnContinuar {
+    display: flex;
+    justify-content: center;
+    height: 2.2em;
+    width: 300px;
+    margin-top: 0.4em;
+    margin-left: 3em;
+    align-items: center;
+}
+
+
+footer {
+    background-color: #BAEDF2;
+    opacity: 0.9;
+}
+
+body {
+    background-image: url(../bootstrap/resources/background.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
