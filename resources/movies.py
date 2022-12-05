@@ -13,14 +13,14 @@ class Movie(Resource):
     minha_requisicao.add_argument('rating')
     minha_requisicao.add_argument('duration', type=int, required=True, help="duration is required")
 
-    @jwt_required()
+    #@jwt_required()
     def get(self, id):
         movie = MovieModel.find_movie_by_id(id)
         if movie: #if movie is not None
             return movie.json()
         return {'message':'movie not found'}, 200 # or 204
 
-    @jwt_required()
+    #@jwt_required()
     def post(self, id):
         movie_id = MovieModel.find_last_movie()
         dados = Movie.minha_requisicao.parse_args()

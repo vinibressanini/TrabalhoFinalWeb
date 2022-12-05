@@ -26,9 +26,9 @@ def create_database():
 
 api.add_resource(Movies, '/movies')
 api.add_resource(Movie, '/movies/<int:id>')
-api.add_resource(User, '/users')
+api.add_resource(User, '/users/<int:id>')
 api.add_resource(UserLogin, '/login')
-api.add_resource(Rating, '/ratings/<int:movie_id>')
+api.add_resource(Rating, '/ratings')
 
 @app.route('/', methods=['GET'])
 def index():
